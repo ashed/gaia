@@ -15,4 +15,4 @@ configuration:
         - inet.0
         - inet.3
       name: INTERFACE_RIB
-    router_id: 192.168.255.4
+    router_id: "{{ device.lo0.ipv4 }}"

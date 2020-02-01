@@ -8,7 +8,7 @@ configuration:
         term:
           from:
             route_filter:
-              - address: 192.168.255.4/32
+              - address: "{{ device.lo0.ipv4 }}/32"
                 exact: null
           name: LOCAL_LOOPBACK
           then:
