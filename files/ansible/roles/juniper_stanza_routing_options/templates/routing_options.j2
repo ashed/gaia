@@ -21,6 +21,9 @@ routing-options {
                 {% if each.route_monitoring.pre_policy is defined %}
                 pre-policy;
                 {% endif %}
+                {% if each.route_monitoring.post_policy is defined %}
+                post-policy;
+                {% endif %}
             }
             {% endif %}
             station-address {{ each.station_address }};
