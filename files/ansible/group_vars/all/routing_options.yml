@@ -5,7 +5,7 @@ configuration:
         - name: openbmp
           initiation_message: "{{ inventory_hostname }}"
           local_address: "{{ ansible_host }}"
-          local_port: "{{ 65535 | random(start=1024) }}"
+          # local_port: "{{ 65535 | random(start=1024) }}"
           connection_mode: active
           monitor: enable
           route_monitoring: 
