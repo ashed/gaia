@@ -14,6 +14,9 @@ routing-options {
         station {{ each.name }} {
             initiation-message {{ inventory_hostname }};
             local-address {{ each.local_address }};
+            {% if each.local_port is defined %}
+            local-port {{ each.local_port }};
+            {% endif %}
             connection-mode {{ each.connection_mode }};
             monitor {{ each.monitor }};
             {% if each.route_monitoring is defined %}
