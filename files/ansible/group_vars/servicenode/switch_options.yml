@@ -1,8 +1,8 @@
 configuration:
   switch_options:
     route_distinguisher:
-      rd_type: 192.168.255.7:999
-    vrf_import: EVPN-IMPORT
+      rd_type: "{{ device.lo0.ipv4 }}:999"
+    vrf_import: EVPN_IMPORT
     vrf_target:
       auto:
         import_as:
