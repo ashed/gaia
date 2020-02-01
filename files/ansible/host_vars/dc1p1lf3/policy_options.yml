@@ -4,7 +4,7 @@ configuration:
       members: target:999:999
       name: ESI
     policy_statement:
-    - name: EVPN-IMPORT
+    - name: EVPN_IMPORT
       term:
         from:
           community: ESI
