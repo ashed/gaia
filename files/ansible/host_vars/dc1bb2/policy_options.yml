@@ -5,7 +5,7 @@ configuration:
         term:
           from:
             route_filter:
-              address: 192.168.255.2/32
+              address: 192.168.255.1/32
               exact: null
           name: LOCAL_LOOPBACK
           then:
@@ -21,9 +21,9 @@ configuration:
         term:
           from:
             route_filter:
-            - address: 10.1.2.0/31
+            - address: 10.1.1.0/31
               exact: null
-            - address: 10.1.2.2/31
+            - address: 10.1.1.2/31
               exact: null
           name: POD1_UNDERLAY
           then:

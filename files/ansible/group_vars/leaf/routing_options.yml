@@ -6,4 +6,3 @@ configuration:
     forwarding_table:
       ecmp_fast_reroute: null
       export: LOAD_BALANCE
-    router_id: 192.168.255.7

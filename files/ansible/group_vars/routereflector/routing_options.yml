@@ -12,4 +12,4 @@ configuration:
         route:
           discard: null
           name: 0.0.0.0/0
-    router_id: 192.168.255.102
+    router_id: "{{ device.lo0.ipv4 }}"
