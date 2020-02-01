@@ -1,0 +1,8 @@
+device:
+  hardware:
+    chassis: "vqfx-10000"
+  software:
+    os_image: "18.4R1.8"
+  lo0: 
+    ipv4: 192.168.33.4
+    iso: 49.0192.0168.0033.0004.00

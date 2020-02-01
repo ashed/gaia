@@ -91,11 +91,12 @@ configuration:
           name: '0'
       - name: lo0
         unit:
-          family:
-            inet:
-              address:
-                name: 192.168.255.3/32
-            iso:
-              address:
-                name: 49.0192.0168.0255.0003.00
-          name: '0'
+          - description: loopback
+            family:
+              inet:
+                address:
+                  name: "{{ device.lo0.ipv4 }}/32"
+              iso:
+                address:
+                  name: "{{ device.lo0.iso }}"
+            name: "0"

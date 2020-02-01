@@ -34,14 +34,18 @@ configuration:
               signaling: null
             inet:
               unicast: null
-          local_address: 192.168.255.5
+          local_address: "{{ device.lo0.ipv4 }}"
           log_updown: null
           multipath: null
           neighbor:
             - description: POD1_LEAF_01
-              name: 192.168.255.7
+              name: 192.168.33.3
             - description: POD1_LEAF_02
-              name: 192.168.255.8
+              name: 192.168.33.4
+            - description: POD1_LEAF_03
+              name: 192.168.33.5
+            - description: POD1_LEAF_04
+              name: 192.168.33.6
           type: internal
         - name: POD1_ROUTE_REFLECTORS
           bfd_liveness_detection:
@@ -52,12 +56,14 @@ configuration:
           family:
             evpn:
               signaling: null
-          local_address: 192.168.255.5
+          local_address: "{{ device.lo0.ipv4 }}"
           log_updown: null
           multipath: null
           neighbor:
-            description: pod1-spine2
-            name: 192.168.255.6
+            - description: DC_ROUTE_REFLECTOR_01
+              name: 192.168.33.11
+            - description: DC_ROUTE_REFLECTOR_02
+              name: 192.168.33.12
           type: internal
         - name: POD1_OVERLAY_TO_POD1_SERVICE_NODES
           bfd_liveness_detection:
@@ -67,15 +73,15 @@ configuration:
           family:
             evpn:
               signaling: null
-          local_address: 192.168.255.5
+          local_address: "{{ device.lo0.ipv4 }}"
           log_updown: null
           multihop:
             no_nexthop_change: null
           multipath: null
           neighbor:
             - description: POD1_SERVICE_NODE_01
-              name: 192.168.255.3
+              name: 192.168.33.7
             - description: POD1_SERVICE_NODE_02
-              name: 192.168.255.4
+              name: 192.168.33.8
           peer_as: '65000.1'
           type: external
