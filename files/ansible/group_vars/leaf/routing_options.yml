@@ -1,7 +1,7 @@
 configuration:
   routing_options:
     autonomous_system:
-      as_number: '65000.101'
+      as_number: '1.101'
       asdot_notation: null
     forwarding_table:
       ecmp_fast_reroute: null
