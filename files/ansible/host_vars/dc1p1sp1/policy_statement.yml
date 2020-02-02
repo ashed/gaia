@@ -12,10 +12,10 @@ configuration:
         term:
           from:
             route_filter:
-            - address: 10.1.1.0/31
-              exact: null
-            - address: 10.1.2.0/31
-              exact: null
+              - address: 10.1.1.0/31
+                exact: null
+              - address: 10.1.2.0/31
+                exact: null
           name: P2P_SPINE_SERVICENODE
           then:
             accept: null
@@ -27,12 +27,16 @@ configuration:
         term:
           from:
             route_filter:
-            - address: 192.168.255.5/32
-              exact: null
-            - address: 192.168.255.7/32
-              exact: null
-            - address: 192.168.255.8/32
-              exact: null
+              - address: 192.168.33.3/32
+                exact: null
+              - address: 192.168.33.4/32
+                exact: null
+              - address: 192.168.33.5/32
+                exact: null
+              - address: 192.168.33.6/32
+                exact: null
+              - address: 192.168.33.9/32
+                exact: null
           name: POD1_LOOPBACKS
           then:
             accept: null
@@ -51,19 +55,19 @@ configuration:
           then:
             accept: null
             community:
-            - add: null
-              community_name: VRF02_RT
-            - add: null
-              community_name: GEN_IP_VRF_RT
-            - add: null
-              community_name: TRUSTED_COMMUNITY
+              - add: null
+                community_name: VRF02_RT
+              - add: null
+                community_name: GEN_IP_VRF_RT
+              - add: null
+                community_name: TRUSTED_COMMUNITY
       - name: VRF02_IMPORT
         term:
           from:
             community:
-            - GEN_IP_VRF_RT
-            - VRF02_RT
-            - TRUSTED_COMMUNITY
+              - GEN_IP_VRF_RT
+              - VRF02_RT
+              - TRUSTED_COMMUNITY
           name: '1'
           then:
             accept: null
