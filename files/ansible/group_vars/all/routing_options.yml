@@ -4,7 +4,7 @@ configuration:
       station:
         - name: openbmp
           initiation_message: "{{ inventory_hostname }}"
-          local_address: "{{ device.lo0.ipv4 }}"
+          local_address: "{{ ansible_host }}"
           # local_port: "{{ 65535 | random(start=1024) }}"
           connection_mode: active
           monitor: enable
