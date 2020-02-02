@@ -17,9 +17,9 @@ configuration:
         name: POD1_OVERLAY_TO_POD1_SPINES
         neighbor:
           - description: POD1_SPINE1
-            name: 192.168.33.7
+            name: 192.168.33.9
           - description: POD1_SPINE2
-            name: 192.168.33.8
+            name: 192.168.33.10
         type: internal
     evpn:
       encapsulation: vxlan

@@ -6,7 +6,7 @@ configuration:
     vrf_target:
       auto:
         import_as:
-          name: '65378'
+          name: '100.1'
           vni_list: all
       community: target:999:999
     vtep_source_interface:
