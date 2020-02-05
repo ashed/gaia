@@ -104,16 +104,16 @@ configuration:
             name: interactive-commands
           name: interactive-commands
       host:
+        # - contents:
+        #     any: null
+        #     name: any
+        #   name: 10.255.127.5
+        #   port: "5514"
+        #   source_address: "{{ ansible_host }}"
         - contents:
             any: null
             name: any
-          name: 10.255.127.5
-          port: "5514"
-          source_address: "{{ ansible_host }}"
-        - contents:
-            any: null
-            name: any
-          name: 10.255.127.26
+          name: 10.255.127.41
           source_address: "{{ ansible_host }}"
       user:
         contents:
