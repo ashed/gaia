@@ -1,4 +1,4 @@
-ansible==2.8.6
+ansible==2.8.8
 ansible-tower-cli==3.3.7
 kafka-python==1.4.7
 lxml==4.4.1
